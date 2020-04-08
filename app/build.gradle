@@ -7,10 +7,15 @@ android {
 
     defaultConfig {
         applicationId "com.rgs.firebasein_appmessagingdemo"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+
+        //If you remove this line you would get this error
+        //Cannot fit requested classes in a single dex file
+        multiDexEnabled true
+
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -33,4 +38,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.5'
 }
