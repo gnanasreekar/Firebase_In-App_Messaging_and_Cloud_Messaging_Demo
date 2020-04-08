@@ -8,15 +8,24 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class MainActivity extends AppCompatActivity {
 
     private final String CHANNEL_ID = "notification";
-
+    private FirebaseAnalytics mFirebaseAnalytics;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        Log.d("Firebaseeeeeeeeeeeee", "Refreshed token: " + refreshedToken);
 
         //For android 8+ we need to create a notification channel to send notifications
 

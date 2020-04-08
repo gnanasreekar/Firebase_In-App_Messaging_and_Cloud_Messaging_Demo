@@ -8,7 +8,7 @@ import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseInstanceIDService extends FirebaseMessagingService  {
 
-    private final String CHANNEL_ID = "simple notification";
+    private final String CHANNEL_ID = "notification";
     private final int NOTIFICATION_ID = 1000;
 
     @Override
