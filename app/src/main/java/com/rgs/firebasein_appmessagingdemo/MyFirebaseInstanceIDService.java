@@ -19,6 +19,7 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService  {
     public void onMessageReceived(RemoteMessage remoteMessage) {
         if (remoteMessage.getNotification().getBody() != null) {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID);
+
             //Set notification icon
             builder.setSmallIcon(R.drawable.ic_launcher_background);
 

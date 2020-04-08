@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
-        Log.d("Firebaseeeeeeeeeeeee", "Refreshed token: " + refreshedToken);
+        Log.d("Firebase Token id", "Refreshed token: " + refreshedToken);
 
         //For android 8+ we need to create a notification channel to send notifications
 
