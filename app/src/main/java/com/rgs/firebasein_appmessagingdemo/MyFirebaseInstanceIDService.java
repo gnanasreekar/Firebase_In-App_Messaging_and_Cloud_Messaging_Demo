@@ -1,5 +1,7 @@
 package com.rgs.firebasein_appmessagingdemo;
 
+import android.util.Log;
+
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -34,5 +36,14 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService  {
             NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
             notificationManagerCompat.notify(NOTIFICATION_ID, builder.build());
         }
+
+
+        if (remoteMessage.getData().get("title") != null) {
+            String title = remoteMessage.getData().get("title");
+            //Get Data from Advance options
+            Log.i("FBData", title);
+
+        }
+
     }
 }
